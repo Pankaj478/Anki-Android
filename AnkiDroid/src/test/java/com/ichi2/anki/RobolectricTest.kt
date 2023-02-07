@@ -46,6 +46,7 @@ import com.ichi2.testutils.MockTime
 import com.ichi2.testutils.TaskSchedulerRule
 import com.ichi2.utils.Computation
 import com.ichi2.utils.InMemorySQLiteOpenHelperFactory
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.*
 import net.ankiweb.rsdroid.BackendException
@@ -66,6 +67,7 @@ import kotlin.concurrent.withLock
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
+@OptIn(ExperimentalCoroutinesApi::class)
 open class RobolectricTest : CollectionGetter {
 
     @Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN")

@@ -17,6 +17,7 @@ package com.ichi2.async
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.ichi2.anki.RobolectricTest
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -24,6 +25,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class CountModelsTest : RobolectricTest() {
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun testModelsCount() = runTest {
         val initialCount = getAllModelsAndNotesCount().first.size /** number of models in the collection */

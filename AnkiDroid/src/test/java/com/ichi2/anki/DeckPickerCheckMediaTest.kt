@@ -18,6 +18,7 @@
 package com.ichi2.anki
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import net.ankiweb.rsdroid.BackendFactory
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.MatcherAssert.assertThat
@@ -31,6 +32,7 @@ class DeckPickerCheckMediaTest : RobolectricTest() {
         return false
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     @Throws(ExecutionException::class, InterruptedException::class)
     fun checkMediaWorksAfterMissingMetaTable() = runTest {

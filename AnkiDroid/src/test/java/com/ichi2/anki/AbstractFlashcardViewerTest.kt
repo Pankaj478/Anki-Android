@@ -24,6 +24,7 @@ import com.ichi2.anki.reviewer.AutomaticAnswerSettings
 import com.ichi2.anki.servicelayer.LanguageHintService
 import com.ichi2.libanki.StdModels
 import com.ichi2.testutils.AnkiAssert.assertDoesNotThrow
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.*
 import org.junit.Assert.*
@@ -39,6 +40,7 @@ import org.robolectric.shadows.ShadowToast
 import java.util.*
 import java.util.stream.Stream
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @RequiresApi(api = Build.VERSION_CODES.O) // getImeHintLocales, toLanguageTags, onRenderProcessGone, RenderProcessGoneDetail
 @RunWith(AndroidJUnit4::class)
 class AbstractFlashcardViewerTest : RobolectricTest() {

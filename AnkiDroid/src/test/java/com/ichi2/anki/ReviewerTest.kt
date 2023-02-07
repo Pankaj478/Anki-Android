@@ -32,6 +32,7 @@ import com.ichi2.libanki.utils.TimeManager
 import com.ichi2.testutils.MockTime
 import com.ichi2.testutils.assertThrowsSubclass
 import com.ichi2.utils.deepClone
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.*
 import org.json.JSONArray
@@ -42,6 +43,7 @@ import org.robolectric.ParameterizedRobolectricTestRunner
 import timber.log.Timber
 import kotlin.test.junit5.JUnit5Asserter.assertNotNull
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(ParameterizedRobolectricTestRunner::class)
 class ReviewerTest : RobolectricTest() {
     @JvmField // required for Parameter

@@ -33,6 +33,7 @@ import com.ichi2.testutils.AnkiAssert.assertDoesNotThrowSuspend
 import com.ichi2.testutils.IntentAssert
 import com.ichi2.testutils.withNoWritePermission
 import com.ichi2.ui.FixedTextView
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import net.ankiweb.rsdroid.RustCleanup
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.*
@@ -49,6 +50,7 @@ import java.util.Random
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(AndroidJUnit4::class)
 class CardBrowserTest : RobolectricTest() {
     @Test

@@ -19,6 +19,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.ichi2.libanki.Card
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.hamcrest.CoreMatchers.not
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.*
@@ -26,6 +27,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(AndroidJUnit4::class)
 class PreviewerTest : RobolectricTest() {
 

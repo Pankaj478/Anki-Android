@@ -34,6 +34,7 @@ import com.ichi2.libanki.Consts
 import com.ichi2.libanki.DeckId
 import com.ichi2.themes.Theme
 import com.ichi2.themes.Themes.currentTheme
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.*
 import org.junit.Before
@@ -143,6 +144,7 @@ class ReviewerNoParamTest : RobolectricTest() {
         assertThat("Hide should be called after answering a card", reviewer.delayedHideCount, greaterThan(hideCount))
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun undoingCardHidesFullScreen() = runTest {
         addNoteUsingBasicModel("Hello", "World")

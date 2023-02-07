@@ -30,6 +30,7 @@ import com.ichi2.anki.R
 import com.ichi2.anki.RobolectricTest
 import com.ichi2.libanki.utils.TimeManager
 import com.ichi2.testutils.assertThrows
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import net.ankiweb.rsdroid.BackendFactory
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.containsInAnyOrder
@@ -45,6 +46,7 @@ import timber.log.Timber
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(AndroidJUnit4::class)
 class DeckPickerContextMenuTest : RobolectricTest() {
     @Before

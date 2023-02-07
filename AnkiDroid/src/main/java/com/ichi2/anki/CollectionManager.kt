@@ -51,6 +51,7 @@ object CollectionManager {
      */
     private var collection: Collection? = null
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     private var queue: CoroutineDispatcher = Dispatchers.IO.limitedParallelism(1)
 
     private val robolectric = "robolectric" == Build.FINGERPRINT
